@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --highlight: #e91e63;
+  --bg-light: linear-gradient(135deg, #ffe6ef, #fff0f5);
+  --text-color: #3a1c2a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ---------- Halaman Awal ---------- */
+.landing {
+  flex-direction: column;
+  text-align: center;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.surat-image {
+  width: 260px;
+  max-width: 80%;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.surat-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.teks-bawah {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #7b4055;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Halaman Surat ---------- */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.surat {
+  background-color: rgba(255, 214, 232, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--text-color);
+}
+
+.surat h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--highlight);
+  margin-bottom: 1.5rem;
+}
+
+.surat p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.surat strong {
+  color: var(--highlight);
+}
+
+.catatan {
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 2rem;
+  color: #6c3c4b;
+}
+
+/* Layout agar footer tetap di bawah */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.container {
+  flex: 1;
+}
+
+/* Logo OSIS */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo-osis {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: white;
+  padding: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #6e4b57;
+  opacity: 0.8;
+  background-color: transparent;
+}
